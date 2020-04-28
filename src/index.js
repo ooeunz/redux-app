@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+const plus = document.getElementById('plus');
+const minus = document.getElementById('minus');
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const number = document.querySelector('span');
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+let cnt = 0;
+
+number.innerHTML = cnt;
+
+const updateText = () => {
+    number.innerHTML = cnt;
+};
+
+const handlePlusClick = () => {
+    cnt++;
+    updateText();
+};
+const handleMinusClick = () => {
+    cnt--;
+    updateText();
+};
+
+plus.addEventListener('click', handlePlusClick);
+minus.addEventListener('click', handleMinusClick);
