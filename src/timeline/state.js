@@ -24,7 +24,7 @@ const reducer = createReducer(INITIAL_STATE, {
       state.timelines[index] = action.timeline;
     }
   },
-  [INCREATE_NEXT_PAGE]: (state, action) => (state, action) => (state.nextPage += 1),
+  [INCREATE_NEXT_PAGE]: (state, action) => (state.nextPage += 1),
 });
 
 export default reducer;
