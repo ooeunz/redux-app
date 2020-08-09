@@ -1,6 +1,6 @@
 import createReducer from '../common/createReducer';
 import createItemLogic from '../common/createItemLogic';
-import mergeReducers from '../common/merReducers';
+import mergeReducers from '../common/mergeReducers';
 
 const { add, remove, edit, reducer: timelinesReducer } = createItemLogic('timelines');
 
